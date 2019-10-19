@@ -1,17 +1,19 @@
-* {
-  font-display: floor($number: 0);
-}
 @import "_base";
 * {
   font-family: "Rubik", sans-serif;
   box-sizing: border-box;
 }
 body {
-  margin: 0 2.5em;
+  margin: 0;
+  padding: 0;
   p {
     color: $GBlue;
     line-height: 1.6em;
   }
+}
+main,
+header {
+  margin: 0 2.5em;
 }
 header {
   padding: 3em 0;
@@ -117,9 +119,10 @@ header {
       line-height: 2em;
     }
   }
-  .feature-tab {
+  .feature-tabs {
     margin-bottom: 5em;
     ul {
+      padding-left: 0;
       list-style: none;
       display: flex;
       flex-direction: column;
@@ -240,6 +243,67 @@ header {
     border-bottom: 1px solid $GBlue;
     img {
       cursor: pointer;
+    }
+  }
+}
+footer {
+  .form {
+    height: 330px;
+    background: $PrimaryBlue;
+    .form-content {
+      color: #fff;
+      padding: 1em 1em;
+      text-align: center;
+      p {
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        font-family: "Rubik", sans-serif;
+        color: #fff;
+      }
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+    form {
+      margin: 0 auto;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      input {
+        border-radius: 5px;
+        border: none;
+        padding: 1.2em 1.2em;
+        margin-bottom: 1em;
+      }
+      button {
+        background: $PrimaryRed;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        padding: 1.2em 1.2em;
+      }
+    }
+  }
+  .footer-content {
+    height: 100%;
+    padding: 1.5em 0;
+    background: $DBlue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .footer-nav {
+      padding: 1.5em 0;
+      color: #fff;
+      text-align: center;
+      ul {
+        text-transform: uppercase;
+        list-style: none;
+        li {
+          text-align: center;
+          margin-bottom: 1.5em;
+        }
+      }
     }
   }
 }
