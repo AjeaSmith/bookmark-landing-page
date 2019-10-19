@@ -179,6 +179,7 @@ header {
     justify-content: center;
     text-align: center;
     .card {
+      border-radius: 10px;
       margin-bottom: 1.5em;
       width: 250px;
       height: 300px;
@@ -209,6 +210,36 @@ header {
       background-position-y: 210px;
       background-color: rgba(248, 246, 246, 0.781);
       padding: 1em 1em;
+    }
+  }
+}
+.FAQ {
+  margin: 5em 0;
+  .FAQ-content {
+    margin-bottom: 3em;
+    text-align: center;
+  }
+  .FAQ-questions {
+    display: flex;
+    flex-direction: column;
+    button {
+      margin: 0 auto;
+      border: none;
+      width: 100px;
+      color: #fff;
+      padding: 1em 1.5em;
+      border-radius: 5px;
+      background: $PrimaryBlue;
+    }
+  }
+  #accordion .questions {
+    margin-bottom: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid $GBlue;
+    img {
+      cursor: pointer;
     }
   }
 }
