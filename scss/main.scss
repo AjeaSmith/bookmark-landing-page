@@ -136,6 +136,25 @@ header {
     .hero-image img {
       max-width: 540px;
     }
+    .background {
+      top: 195px;
+    }
+    .CTA {
+      button:nth-of-type(1) {
+        &:hover {
+          border: 2px solid $PrimaryBlue;
+          background-color: #fff;
+          color: $PrimaryBlue;
+        }
+      }
+      button:nth-of-type(2) {
+        &:hover {
+          border: 2px solid rgba(238, 238, 238, 0.726);
+          background-color: #fff;
+          color: gray;
+        }
+      }
+    }
   }
 }
 .features {
