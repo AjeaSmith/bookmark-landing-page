@@ -96,3 +96,71 @@ header {
     }
   }
 }
+.features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .feature-content {
+    text-align: center;
+    p {
+      line-height: 2em;
+    }
+  }
+  .feature-tab {
+    .background {
+      width: 350px;
+      height: 220px;
+      background: $PrimaryBlue;
+      position: absolute;
+      z-index: -1;
+      top: 1300px;
+      left: 0;
+      border-top-right-radius: 80px;
+      border-bottom-right-radius: 90px;
+    }
+    margin-bottom: 5em;
+    ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      margin-bottom: 4em;
+    }
+    li {
+      border-top: 1px solid $GBlue;
+      margin-right: 0.5em;
+      padding: 1em 0;
+    }
+    li:nth-of-type(3) {
+      border-bottom: 1px solid $GBlue;
+    }
+    a {
+      color: $DBlue;
+      text-align: center;
+      text-decoration: none;
+      border-bottom: 3px solid $PrimaryRed;
+      padding-bottom: 1em;
+    }
+    img {
+      text-align: center;
+      width: 100%;
+    }
+    .tabs {
+      text-align: center;
+      .tab-image-1,
+      .tab-image-2,
+      .tab-image-3 {
+        margin-bottom: 5em;
+      }
+      button {
+        background: $PrimaryBlue;
+        padding: 1em 2.2em;
+        color: #fff;
+        outline: none;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+.extension {
+}
