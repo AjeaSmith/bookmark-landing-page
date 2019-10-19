@@ -100,6 +100,17 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  .background2 {
+    width: 320px;
+    height: 250px;
+    background: $PrimaryBlue;
+    position: absolute;
+    z-index: -1;
+    top: 1280px;
+    left: 0;
+    border-top-right-radius: 80px;
+    border-bottom-right-radius: 80px;
+  }
   .feature-content {
     text-align: center;
     p {
@@ -107,17 +118,6 @@ header {
     }
   }
   .feature-tab {
-    .background2 {
-      width: 320px;
-      height: 250px;
-      background: $PrimaryBlue;
-      position: absolute;
-      z-index: -1;
-      top: 1280px;
-      left: 0;
-      border-top-right-radius: 80px;
-      border-bottom-right-radius: 90px;
-    }
     margin-bottom: 5em;
     ul {
       list-style: none;
@@ -163,4 +163,52 @@ header {
   }
 }
 .extension {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  .extension-content {
+    text-align: center;
+    margin-bottom: 1em;
+    padding: 0 1em;
+  }
+  .extension-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    .card {
+      margin-bottom: 1.5em;
+      width: 250px;
+      height: 300px;
+      p {
+        margin-bottom: 4em;
+        margin-top: 0;
+      }
+      h4 {
+        margin-top: 0.7em;
+        margin-bottom: 0;
+      }
+      button {
+        padding: 1em 1.5em;
+        border-radius: 5px;
+        border: none;
+        background: $PrimaryBlue;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+    .chrome,
+    .firefox,
+    .opera {
+      -webkit-box-shadow: 0px 12px 10px -5px $PrimaryBlue;
+      box-shadow: 0px 7px 10px -5px hsla(231, 69%, 60%, 0.479);
+      background: url("/images/bg-dots.svg");
+      background-repeat: no-repeat;
+      background-position-y: 210px;
+      background-color: rgba(248, 246, 246, 0.781);
+      padding: 1em 1em;
+    }
+  }
 }
