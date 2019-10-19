@@ -9,6 +9,9 @@ body {
   p {
     color: $GBlue;
     line-height: 1.6em;
+    @include for-ipads {
+      line-height: 1.4em;
+    }
   }
 }
 main,
@@ -23,9 +26,6 @@ header {
   height: 70px;
   span {
     cursor: pointer;
-    @include for-ipads {
-      display: none;
-    }
   }
   nav {
     display: none;
@@ -39,7 +39,7 @@ header {
       }
     }
     button {
-      border: none;
+      border: 2px solid $PrimaryRed;
       color: #fff;
       background: $PrimaryRed;
       cursor: pointer;
@@ -48,15 +48,33 @@ header {
     }
     @include for-ipads {
       display: block;
+      button {
+        &:hover {
+          border-color: 2px solid $PrimaryRed;
+          background-color: #fff;
+          color: $PrimaryRed;
+        }
+      }
+      ul li {
+        &:hover {
+          cursor: pointer;
+          color: $PrimaryRed;
+        }
+      }
     }
   }
-  //MEDIA QUERIES
+  @include for-ipads {
+    height: 50px;
+    span {
+      display: none;
+    }
+  }
 }
 .hero {
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   margin: 2em 0;
   .hero-image img {
     width: 358px;
@@ -102,6 +120,21 @@ header {
         border: none;
         cursor: pointer;
       }
+    }
+  }
+  @include for-ipads {
+    flex-direction: row;
+    .hero-content {
+      text-align: left;
+      h2 {
+        margin: 0;
+      }
+      p {
+        font-size: 0.8em;
+      }
+    }
+    .hero-image img {
+      max-width: 540px;
     }
   }
 }
