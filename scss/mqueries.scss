@@ -1,0 +1,15 @@
+@mixin for-ipads {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin for-desktops {
+  @media (min-width: 1224px) {
+    @content;
+  }
+}
+@mixin for-largescreens {
+  @media (min-width: 1824px) {
+    @content;
+  }
+}
