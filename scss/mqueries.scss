@@ -1,25 +1,15 @@
-@mixin screen415 {
-  @media (min-width: 415px) {
-    @content;
-  }
-}
-@mixin screen488 {
-  @media (min-width: 488px) {
-    @content;
-  }
-}
-@mixin screen530 {
-  @media (min-width: 530px) {
-    @content;
-  }
-}
-@mixin screen735 {
-  @media (min-width: 735px) {
+@mixin screen640 {
+  @media (min-width: 640px) {
     @content;
   }
 }
 @mixin for-ipads {
   @media (min-width: 768px) {
+    @content;
+  }
+}
+@mixin for-large {
+  @media (min-width: 868px) {
     @content;
   }
 }

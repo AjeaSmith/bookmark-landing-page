@@ -18,10 +18,10 @@ main,
 header {
   margin: 0 2em;
 }
-// Background
+// Backgrounds
 .background {
   width: 280px;
-  height: 180px;
+  height: 190px;
   top: 175px;
   background: $PrimaryBlue;
   position: absolute;
@@ -29,18 +29,49 @@ header {
   right: 0;
   border-top-left-radius: 80px;
   border-bottom-left-radius: 90px;
-  @include screen488 {
-    width: 330px;
-    top: 190px;
-    height: 240px;
-  }
-  @include screen735 {
-    top: 250px;
+  @include screen640 {
+    width: 380px;
+    top: 255px;
+    height: 280px;
   }
   @include for-ipads {
-    top: 185px;
+    width: 280px;
+    height: 200px;
+    top: 235px;
+  }
+  @include for-large {
+    width: 380px;
+    top: 255px;
+    height: 230px;
   }
 }
+.background2 {
+  width: 290px;
+  height: 200px;
+  background: $PrimaryBlue;
+  position: absolute;
+  z-index: -1;
+  top: 1250px;
+  left: 0;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
+  @include screen640 {
+    width: 400px;
+    top: 1360px;
+    height: 250px;
+  }
+  @include for-ipads {
+    top: 880px;
+    width: 290px;
+    height: 200px;
+  }
+  @include for-large {
+    top: 950px;
+     width: 400px;
+     height: 240px;
+  }
+}
+// HEADER
 header {
   padding: 3em 0;
   display: flex;
@@ -69,24 +100,8 @@ header {
       padding: 0.7em 2.5em;
       border-radius: 5px;
     }
-    // @include for-ipads {
-    //   display: block;
-    //   button {
-    //     &:hover {
-    //       border-color: 2px solid $PrimaryRed;
-    //       background-color: #fff;
-    //       color: $PrimaryRed;
-    //     }
-    //   }
-    //   ul li {
-    //     &:hover {
-    //       cursor: pointer;
-    //       color: $PrimaryRed;
-    //     }
-    //   }
-    // }
   }
-  @include screen735 {
+  @include for-ipads {
     nav {
       display: block;
       button {
@@ -106,8 +121,6 @@ header {
     span {
       display: none;
     }
-  }
-  @include for-ipads {
     height: 50px;
     span {
       display: none;
@@ -157,25 +170,8 @@ header {
       }
     }
   }
-  @include screen488 {
-    .hero-image img {
-      width: 90%;
-    }
-  }
-  @include screen530 {
-    img {
-      width: 100%;
-    }
-  }
-  @include screen735 {
-    img {
-      width: 80%;
-    }
-    .hero-content p {
-      width: 25em;
-    }
-  }
   @include for-ipads {
+    margin: 4em 0;
     flex-direction: row;
     .hero-content {
       text-align: left;
@@ -206,23 +202,17 @@ header {
       }
     }
   }
+  @include for-large {
+    img {
+      width: 460px;
+    }
+  }
 }
 // FEATURE
 .features {
   display: flex;
   flex-direction: column;
   align-items: center;
-  .background2 {
-    width: 290px;
-    height: 200px;
-    background: $PrimaryBlue;
-    position: absolute;
-    z-index: -1;
-    top: 1250px;
-    left: 0;
-    border-top-right-radius: 80px;
-    border-bottom-right-radius: 80px;
-  }
   .feature-content {
     text-align: center;
     p {
@@ -264,9 +254,6 @@ header {
       flex-direction: column;
       text-align: center;
       align-items: center;
-      img {
-        margin-bottom: 5em;
-      }
       button {
         background: $PrimaryBlue;
         padding: 1em 2.2em;
@@ -276,78 +263,48 @@ header {
       }
     }
   }
-  @include screen488 {
-    .tabs img {
-      width: 90%;
-    }
-    .background2 {
-      width: 330px;
-      top: 1250px;
-      height: 250px;
-    }
-  }
-  @include screen530 {
-    .feature-tabs img {
-      width: 70%;
-    }
-    .background2 {
-      top: 1260px;
-    }
-    .feature-content p {
-      font-size: 1.1em;
-    }
-  }
-  @include screen735 {
-    .feature-content {
-      margin-bottom: 1.5em;
-    }
+  @include screen640 {
     .feature-content p {
       width: 25em;
     }
-    .background2 {
-      top: 1430px;
+    .feature-tabs {
+      width: 80%;
     }
     .feature-tabs img {
-      width: 70%;
-    }
-    .feature-tabs .tab-content {
-      width: 30em;
+      width: 400px;
     }
   }
   @include for-ipads {
-    .background2 {
-      top: 785px;
-      height: 220px;
-      width: 320px;
-    }
-    .feature-content p {
-      width: 28rem;
-      line-height: 1.5em;
+    .feature-tabs {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
     }
     .feature-tabs ul {
       flex-direction: row;
-      justify-content: center;
       li {
-        border-top: none;
+        border-top: 0;
       }
     }
-    .feature-tabs img {
-      width: 300px;
-      margin-bottom: 0;
+    .feature-tabs .tabs {
+      align-items: center;
+      flex-direction: row;
     }
     .feature-tabs .tabs img {
       margin-bottom: 0;
+      width: 300px;
     }
-    .feature-tabs .tabs {
-      padding: 0 1.5em;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-evenly;
-      .tab-content {
-        font-size: 0.7em;
-        padding: 0 3em;
-        text-align: left;
-      }
+    .feature-tabs .tabs .tab-content {
+      text-align: left;
+      padding: 0 1em;
+      width: 25em;
+    }
+  }
+  @include for-large {
+    .feature-tabs .tabs img {
+      width: 400px;
     }
   }
 }
@@ -403,12 +360,13 @@ header {
       padding: 1em 1em;
     }
   }
-  @include screen530 {
+  @include screen640 {
+    margin-top: 3em;
     .extension-content {
-      font-size: 1.1em;
+      width: 25em;
     }
   }
-  @include screen735 {
+  @include for-ipads {
     .extension-content {
       width: 25em;
     }
@@ -458,28 +416,21 @@ header {
       }
     }
   }
-  @include screen415 {
-    #accordion {
-      margin-bottom: 5em;
-    }
-  }
-  @include screen735 {
+  @include screen640 {
     .FAQ-questions {
-      width: 100%;
       align-items: center;
     }
-    .FAQ-content p {
-      padding: 0 2em;
-    }
-    .FAQ-questions .answer {
-      margin: 1.5em 0;
+    .FAQ-questions #accordion {
+      width: 75%;
     }
     .FAQ-questions button {
-      margin: 20px auto;
+      margin: 30px auto;
     }
-    .FAQ-questions #accordion {
-      width: 25em;
-      margin-bottom: 1em;
+  }
+  @include for-ipads {
+    .FAQ-content {
+      text-align: center;
+      padding: 0 3em;
     }
   }
 }
@@ -523,7 +474,6 @@ footer {
       }
     }
   }
-
   .footer-content {
     height: 100%;
     padding: 1.5em 0;
@@ -563,7 +513,7 @@ footer {
       }
     }
   }
-  @include screen735 {
+  @include for-ipads {
     .form {
       display: flex;
       flex-direction: column;
@@ -594,6 +544,7 @@ footer {
         flex-direction: row;
         align-items: center;
         ul {
+          display: flex;
           margin: 0 0;
         }
         ul li {
