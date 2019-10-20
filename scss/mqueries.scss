@@ -1,3 +1,13 @@
+@mixin screen415 {
+  @media (min-width: 415px) {
+    @content;
+  }
+}
+@mixin screen488 {
+  @media (min-width: 488px) {
+    @content;
+  }
+}
 @mixin for-ipads {
   @media (min-width: 768px) {
     @content;

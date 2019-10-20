@@ -16,7 +16,7 @@ body {
 }
 main,
 header {
-  margin: 0 2.5em;
+  margin: 0 2em;
 }
 header {
   padding: 3em 0;
@@ -70,18 +70,20 @@ header {
     }
   }
 }
+// HERO
 .hero {
+  width: 100%;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
   align-items: flex-start;
   margin: 2em 0;
   .hero-image img {
-    width: 358px;
+    width: 100%;
   }
   .background {
     width: 280px;
-    height: 210px;
+    height: 200px;
     top: 175px;
     background: $PrimaryBlue;
     position: absolute;
@@ -122,6 +124,12 @@ header {
       }
     }
   }
+  @include screen488 {
+    .background {
+      top: 187px;
+      height: 230px;
+    }
+  }
   @include for-ipads {
     flex-direction: row;
     .hero-content {
@@ -134,7 +142,7 @@ header {
       }
     }
     .hero-image img {
-      max-width: 540px;
+      width: 400px;
     }
     .background {
       top: 195px;
@@ -157,6 +165,7 @@ header {
     }
   }
 }
+// FEATURE
 .features {
   display: flex;
   flex-direction: column;
@@ -167,7 +176,7 @@ header {
     background: $PrimaryBlue;
     position: absolute;
     z-index: -1;
-    top: 1280px;
+    top: 1250px;
     left: 0;
     border-top-right-radius: 80px;
     border-bottom-right-radius: 80px;
@@ -180,6 +189,7 @@ header {
   }
   .feature-tabs {
     margin-bottom: 5em;
+    width: 100%;
     ul {
       padding-left: 0;
       list-style: none;
@@ -187,31 +197,31 @@ header {
       flex-direction: column;
       text-align: center;
       margin-bottom: 4em;
-    }
-    li {
-      border-top: 1px solid $GBlue;
-      margin-right: 0.5em;
-      padding: 1em 0;
-    }
-    li:nth-of-type(3) {
-      border-bottom: 1px solid $GBlue;
-    }
-    a {
-      color: $DBlue;
-      text-align: center;
-      text-decoration: none;
-      border-bottom: 3px solid $PrimaryRed;
-      padding-bottom: 1em;
+      li {
+        border-top: 1px solid $GBlue;
+        margin-right: 0.5em;
+        padding: 1em 0;
+        &:nth-of-type(3) {
+          border-bottom: 1px solid $GBlue;
+        }
+        a {
+          color: $DBlue;
+          text-align: center;
+          text-decoration: none;
+          border-bottom: 3px solid $PrimaryRed;
+          padding-bottom: 1em;
+        }
+      }
     }
     img {
       text-align: center;
-      width: 290px;
+      width: 100%;
     }
     .tabs {
+      display: flex;
+      flex-direction: column;
       text-align: center;
-      .tab-image-1,
-      .tab-image-2,
-      .tab-image-3 {
+      img {
         margin-bottom: 5em;
       }
       button {
@@ -223,7 +233,48 @@ header {
       }
     }
   }
+  @include screen488 {
+    .tabs img {
+      width: 90%;
+    }
+    .background2 {
+      top: 1250px;
+      height: 250px;
+    }
+  }
+  @include for-ipads {
+    .background2 {
+      top: 755px;
+    }
+    .feature-content p {
+      width: 28rem;
+      line-height: 1.5em;
+    }
+    .feature-tabs ul {
+      flex-direction: row;
+      justify-content: center;
+      li {
+        border-top: none;
+      }
+    }
+    .feature-tabs .tabs img {
+      width: 270px;
+      margin-bottom: 0;
+    }
+    .feature-tabs .tabs {
+      padding: 0 1.5em;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+      .tab-content {
+        font-size: 0.7em;
+        padding: 0 3em;
+        text-align: left;
+      }
+    }
+  }
 }
+// EXTENSION
 .extension {
   display: flex;
   flex-direction: column;
@@ -275,6 +326,7 @@ header {
     }
   }
 }
+// FAQ
 .FAQ {
   margin: 5em 0;
   .FAQ-content {
@@ -285,7 +337,7 @@ header {
     display: flex;
     flex-direction: column;
     button {
-      margin: 0 auto;
+      margin: 50px auto;
       border: none;
       width: 100px;
       color: #fff;
@@ -293,18 +345,24 @@ header {
       border-radius: 5px;
       background: $PrimaryBlue;
     }
-  }
-  #accordion .questions {
-    margin-bottom: 1.5em;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid $GBlue;
-    img {
-      cursor: pointer;
+    #accordion .questions {
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid $GBlue;
+      img {
+        cursor: pointer;
+      }
+    }
+    @include screen415 {
+      #accordion {
+        margin-bottom: 5em;
+      }
     }
   }
 }
+// FOOTER
 footer {
   .form {
     height: 330px;
@@ -335,6 +393,7 @@ footer {
         margin-bottom: 1em;
       }
       button {
+        cursor: pointer;
         background: $PrimaryRed;
         color: #fff;
         border-radius: 5px;
