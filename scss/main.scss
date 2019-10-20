@@ -451,10 +451,29 @@ header {
         cursor: pointer;
       }
     }
-    @include screen415 {
-      #accordion {
-        margin-bottom: 5em;
-      }
+  }
+  @include screen415 {
+    #accordion {
+      margin-bottom: 5em;
+    }
+  }
+  @include screen735 {
+    .FAQ-questions {
+      width: 100%;
+      align-items: center;
+    }
+    .FAQ-content p {
+      padding: 0 2em;
+    }
+    .FAQ-questions .answer {
+      margin: 1.5em 0;
+    }
+    .FAQ-questions button {
+      margin: 20px auto;
+    }
+    .FAQ-questions #accordion {
+      width: 25em;
+      margin-bottom: 1em;
     }
   }
 }
@@ -498,6 +517,7 @@ footer {
       }
     }
   }
+
   .footer-content {
     height: 100%;
     padding: 1.5em 0;
@@ -534,6 +554,52 @@ footer {
       span i {
         font-size: 1.5em;
         color: #fff;
+      }
+    }
+  }
+  @include screen735 {
+    .form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .form form {
+      width: 100%;
+      margin: 0;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      input,
+      button {
+        width: 150px;
+        margin-bottom: 0;
+        padding: 1em;
+        margin-right: 0.5em;
+      }
+      input {
+        width: 200px;
+      }
+    }
+    .footer-content {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      .footer-nav {
+        flex-direction: row;
+        align-items: center;
+        ul {
+          margin: 0 0;
+        }
+        ul li {
+          cursor: pointer;
+          margin-bottom: 0;
+          margin-right: 0.8em;
+        }
+      }
+    }
+    .footer-social {
+      span {
+        cursor: pointer;
       }
     }
   }
