@@ -8,18 +8,18 @@
     @content;
   }
 }
+@mixin screen530 {
+  @media (min-width: 530px) {
+    @content;
+  }
+}
+@mixin screen735 {
+  @media (min-width: 735px) {
+    @content;
+  }
+}
 @mixin for-ipads {
   @media (min-width: 768px) {
-    @content;
-  }
-}
-@mixin for-desktops {
-  @media (min-width: 1224px) {
-    @content;
-  }
-}
-@mixin for-largescreens {
-  @media (min-width: 1824px) {
     @content;
   }
 }
