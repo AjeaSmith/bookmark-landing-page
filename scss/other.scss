@@ -48,7 +48,7 @@ footer {
   @media screen and (min-width: 600px) {
     top: 230px;
     height: 300px;
-    width: 400px;
+    width: 460px;
   }
   @media screen and (min-width: 768px) {
     top: 200px;
@@ -196,6 +196,10 @@ header {
     }
   }
   @media screen and (min-width: 600px) {
+    row-gap: 2em;
+    .hero-content {
+      width: 30em;
+    }
   }
   @media screen and (min-width: 768px) {
     grid-template-areas: "contentBottom contentTop";
@@ -452,15 +456,19 @@ header {
       border-radius: 5px;
       background: $PrimaryBlue;
     }
-    @media screen and (min-width: 500px) {
-    }
-    @media screen and (min-width: 600px) {
-    }
-    @media screen and (min-width: 1000px) {
-    }
     @media screen and (min-width: 768px) {
       width: 30em;
     }
+  }
+  @media screen and (min-width: 600px) {
+    .FAQ-content {
+      width: 30em;
+    }
+    .FAQ-questions #accordion {
+      width: 100%;
+    }
+  }
+  @media screen and (min-width: 1000px) {
   }
 }
 footer {
