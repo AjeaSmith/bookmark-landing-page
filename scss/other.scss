@@ -3,10 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
 }
 header,
 main {
   margin: 2em 1em;
+  p {
+    line-height: 1.8em;
+  }
 }
 header {
   display: grid;
@@ -172,6 +176,7 @@ header {
     display: flex;
     flex-direction: column;
     #accordion .questions {
+      cursor: pointer;
       padding: 1.5em 0;
       text-align: center;
       display: flex;
@@ -180,6 +185,9 @@ header {
       border-bottom: 1px solid $GBlue;
       img {
         cursor: pointer;
+      }
+      &:hover {
+        color: $PrimaryRed;
       }
     }
     #accordion .answer {
@@ -193,6 +201,92 @@ header {
       padding: 1em 1.5em;
       border-radius: 5px;
       background: $PrimaryBlue;
+    }
+  }
+}
+footer {
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 320px;
+    background: $PrimaryBlue;
+    .form-content {
+      color: #fff;
+      padding: 1em 1em;
+      text-align: center;
+      font-size: 1em;
+      p {
+        padding: 0.5em 0;
+        font-size: 0.8em;
+        letter-spacing: 0.4em;
+        text-transform: uppercase;
+        font-family: "Rubik", sans-serif;
+        color: #fff;
+      }
+      h3 {
+        font-size: 1.5em;
+      }
+    }
+    form {
+      margin: 0 auto;
+      width: 250px;
+      display: flex;
+      flex-direction: column;
+      input {
+        border-radius: 5px;
+        border: none;
+        padding: 1.2em 1.2em;
+        margin-bottom: 1em;
+      }
+      button {
+        cursor: pointer;
+        background: $PrimaryRed;
+        color: #fff;
+        border-radius: 5px;
+        border: none;
+        padding: 1.2em 1.2em;
+      }
+    }
+  }
+  .footer-container {
+    height: 100%;
+    padding: 1.5em 0;
+    background: $DBlue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .footer-nav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5em 0;
+      color: #fff;
+      ul {
+        padding: 0;
+        text-transform: uppercase;
+        list-style: none;
+        li {
+          text-align: center;
+          margin-bottom: 1.5em;
+        }
+      }
+      .footer-logo {
+        padding: 1em 0;
+        width: 176px;
+        svg {
+          width: 100%;
+        }
+      }
+    }
+    .footer-social {
+      span {
+        margin-right: 0.5em;
+      }
+      span i {
+        font-size: 1.5em;
+        color: #fff;
+      }
     }
   }
 }
