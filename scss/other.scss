@@ -31,8 +31,8 @@ footer {
   }
 }
 .background {
-  width: 280px;
-  height: 190px;
+  width: 300px;
+  height: 220px;
   top: 143px;
   background: $PrimaryBlue;
   position: absolute;
@@ -41,9 +41,9 @@ footer {
   border-top-left-radius: 80px;
   border-bottom-left-radius: 90px;
   @media screen and (min-width: 500px) {
-    top: 170px;
+    top: 200px;
     height: 250px;
-    width: 370px;
+    width: 380px;
   }
   @media screen and (min-width: 600px) {
     top: 230px;
@@ -322,8 +322,8 @@ header {
   .extension-content {
     grid-area: extension-content;
     text-align: center;
-    width: 25em;
-    margin: 0 auto;
+    margin: 0 2.1em;
+    align-self: center;
     h3 {
       margin: 1em 0;
     }
@@ -376,6 +376,11 @@ header {
       grid-area: card3;
     }
   }
+  @media screen and (min-width: 500px) {
+    .extension-cards .card {
+      background-position-y: 265px;
+    }
+  }
   @media screen and (min-width: 600px) {
     .extension-content {
       width: 25em;
@@ -403,6 +408,11 @@ header {
     margin-bottom: 3em;
     text-align: center;
     width: 25em;
+    @media screen and (min-width: 500px) {
+      h3 {
+        margin: 1em 0;
+      }
+    }
     @media screen and (min-width: 768px) {
       width: 30em;
     }
@@ -441,6 +451,12 @@ header {
       padding: 1em 1.5em;
       border-radius: 5px;
       background: $PrimaryBlue;
+    }
+    @media screen and (min-width: 500px) {
+    }
+    @media screen and (min-width: 600px) {
+    }
+    @media screen and (min-width: 1000px) {
     }
     @media screen and (min-width: 768px) {
       width: 30em;
