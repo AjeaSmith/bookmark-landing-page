@@ -419,9 +419,10 @@ header {
     }
     .extension-cards {
       height: 100%;
-      width: 580px;
+      width: 100%;
       flex-direction: row;
       .card {
+        width: 250px;
         height: 100%;
         margin-right: 0.7em;
       }
@@ -430,9 +431,19 @@ header {
       .opera {
         background-position-y: 220px;
       }
+      .firefox {
+        margin-top: 3em;
+      }
+      .opera {
+        margin-top: 6em;
+      }
     }
   }
   @include for-large {
+    .extension-cards {
+      width: 100%;
+      justify-content: space-evenly;
+    }
     .extension-content {
       font-size: 1.2em;
     }
