@@ -50,6 +50,11 @@ footer {
     height: 300px;
     width: 460px;
   }
+  @media screen and (min-width: 700px) {
+    top: 250px;
+    height: 360px;
+    width: 500px;
+  }
   @media screen and (min-width: 768px) {
     top: 200px;
     height: 220px;
@@ -67,6 +72,15 @@ footer {
   }
 }
 .background2 {
+  width: 290px;
+  height: 200px;
+  background: $PrimaryBlue;
+  position: absolute;
+  z-index: -1;
+  top: 810px;
+  left: 0;
+  border-top-right-radius: 80px;
+  border-bottom-right-radius: 80px;
 }
 // HEADER
 header {
@@ -147,7 +161,6 @@ header {
     align-self: center;
     grid-area: contentTop;
   }
-
   .hero-content {
     text-align: center;
     width: 25em;
@@ -203,10 +216,19 @@ header {
   }
   @media screen and (min-width: 768px) {
     grid-template-areas: "contentBottom contentTop";
+    grid-template-columns: 300px 1fr;
+    margin: 0 1.9em;
+    column-gap: 10px;
     .hero-content {
       text-align: left;
+      width: 100%;
+      font-size: 0.8em;
       h2 {
         margin: 0.5em 0;
+      }
+      p {
+        width: 25em;
+        line-height: 1.6em;
       }
     }
     .img {
@@ -305,6 +327,7 @@ header {
     }
   }
   @media screen and (min-width: 768px) {
+    margin-top: 5em;
     .feature-tabs ul {
       flex-direction: row;
       justify-content: center;
@@ -312,6 +335,16 @@ header {
         border-top: none;
         border-bottom: 2px solid $PrimaryRed;
         margin-right: 0.9em;
+      }
+    }
+    .feature-tabs .tabs img {
+      align-self: center;
+    }
+    .feature-tabs .tabs .tab-content {
+      text-align: left;
+      padding-right: 1.2em;
+      p {
+        line-height: 1.6em;
       }
     }
   }
