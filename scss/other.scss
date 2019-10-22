@@ -29,6 +29,9 @@ footer {
   @media screen and (min-width: 768px) {
     font-size: 1em;
   }
+  @media screen and (min-width: 900px) {
+    font-size: 1.2em;
+  }
 }
 .background {
   width: 300px;
@@ -63,24 +66,54 @@ footer {
   @media screen and (min-width: 900px) {
     top: 210px;
     height: 250px;
-    width: 290px;
+    width: 360px;
   }
   @media screen and (min-width: 1000px) {
-    top: 300px;
+    top: 250px;
     height: 290px;
-    width: 450px;
+    width: 470px;
   }
 }
 .background2 {
-  width: 290px;
+  width: 310px;
   height: 200px;
   background: $PrimaryBlue;
   position: absolute;
   z-index: -1;
-  top: 810px;
+  top: 950px;
   left: 0;
   border-top-right-radius: 80px;
   border-bottom-right-radius: 80px;
+  @media screen and (min-width: 500px) {
+    top: 1170px;
+    height: 250px;
+    width: 390px;
+  }
+  @media screen and (min-width: 600px) {
+    top: 1300px;
+    height: 250px;
+    width: 460px;
+  }
+  @media screen and (min-width: 700px) {
+    top: 1400px;
+    height: 200px;
+    width: 270px;
+  }
+  @media screen and (min-width: 768px) {
+    top: 750px;
+    height: 200px;
+    width: 270px;
+  }
+  @media screen and (min-width: 900px) {
+    top: 905px;
+    height: 200px;
+    width: 280px;
+  }
+  @media screen and (min-width: 1000px) {
+    top: 1030px;
+    height: 200px;
+    width: 470px;
+  }
 }
 // HEADER
 header {
@@ -236,13 +269,21 @@ header {
     }
   }
   @media screen and (min-width: 900px) {
+    grid-template-columns: 338px 1fr;
+    .hero-content p {
+      width: 100%;
+    }
     img {
       width: 100%;
     }
   }
   @media screen and (min-width: 1000px) {
+    grid-template-columns: 1fr 1fr;
     img {
       max-width: 700px;
+    }
+    .hero-content {
+      font-size: 1.3em;
     }
   }
 }
@@ -326,6 +367,35 @@ header {
       justify-self: center;
     }
   }
+  @media screen and (min-width: 700px) {
+    .tabs-container .tabs {
+      grid-template-areas: "img-tab content-tab";
+      grid-template-columns: 350px 330px;
+    }
+    .feature-tabs .tabs img {
+      align-self: center;
+      width: 300px;
+    }
+    .feature-tabs .tabs .tab-content {
+      margin: 0;
+      width: 100%;
+      padding: 0 1em;
+      text-align: left;
+      font-size: 0.8em;
+      p {
+        line-height: 1.6em;
+      }
+    }
+    .feature-tabs ul {
+      justify-content: center;
+      flex-direction: row;
+      li {
+        margin-right: 1em;
+        border-bottom: 2px solid $PrimaryRed;
+        border-top: 0;
+      }
+    }
+  }
   @media screen and (min-width: 768px) {
     margin-top: 5em;
     .feature-tabs ul {
@@ -348,7 +418,20 @@ header {
       }
     }
   }
+  @media screen and (min-width: 900px) {
+    .feature-tabs .tabs .tab-content {
+      width: 32em;
+    }
+  }
   @media screen and (min-width: 1000px) {
+    .tabs-container .tabs {
+      grid-template-columns: 1fr 1fr;
+
+      img {
+        width: 370px;
+      }
+    }
+    font-size: 1.4em;
   }
 }
 .extension {
@@ -425,6 +508,7 @@ header {
     }
   }
   @media screen and (min-width: 700px) {
+    margin-top: 5em;
     .extension-cards {
       column-gap: 5px;
       grid-template-areas: "card1 card2 card3";
